@@ -3,6 +3,7 @@ import pandas as pd
 import seaborn as sns
 import pickle 
 import joblib
+import base64
 
 ##Models
 from sklearn.model_selection import train_test_split
@@ -46,9 +47,12 @@ if choice == 'EDA':
             selected_columns = st.multiselect("Select Columns", column)
             df1 = df[selected_columns]
             st.dataframe(df1)
-            btn1 = st.button('Save new Dataframe')
-            if btn1:
-                df1.to_csv('Selected Column Dataframe.csv')
+            
+            csv = df1.to_csv(index=False)
+            b64 = base64.b64encode(csv.encode()).decode()
+            st.markdown('### **⬇️ Download output CSV File **')
+            href2 = f'<a href="data:file/csv;base64,{b64}">Download CSV File</a> (right-click and save as ".csv")'
+            st.markdown(href2, unsafe_allow_html=True)
 
         if st.checkbox('Value Counts'):
             st.write(df.iloc[:,-1].value_counts())
@@ -65,7 +69,12 @@ if choice == 'EDA':
             st.dataframe(df2)
             btn = st.button('Save new Dataframe')
             if btn:
-                df2.to_csv('Deleted Column Dataframe.csv')
+                csv = df2.to_csv(index=False)
+                b64 = base64.b64encode(csv.encode()).decode()
+                st.markdown('### **⬇️ Download output CSV File **')
+                href = f'<a href="data:file/csv;base64,{b64}">Download CSV File</a> (right-click and save as ".csv")'
+                st.markdown(href, unsafe_allow_html=True)
+                # df2.to_csv('Deleted Column Dataframe.csv')
         
         if st.checkbox('Null Values in Column'):
             all_columns_3 = df.columns.to_list()
@@ -79,8 +88,11 @@ if choice == 'EDA':
                 df4 = df.fillna(x)
                 st.dataframe(df4)
 
-                if st.button('Save Dataframe'):
-                    df4.to_csv('Handeled NaN.csv')
+                csv = df4.to_csv(index=False)
+                b64 = base64.b64encode(csv.encode()).decode()
+                st.markdown('### **⬇️ Download output CSV File **')
+                href1 = f'<a href="data:file/csv;base64,{b64}">Download CSV File</a> (right-click and save as ".csv")'
+                st.markdown(href1, unsafe_allow_html=True)
 
         if st.checkbox('Heatmap'):
             st.write(sns.heatmap(df.corr(), annot=True))
@@ -146,8 +158,12 @@ elif choice == 'ML Models':
                 # st.write(y_pred)
                 acc_score = accuracy_score(y_test, y_pred.round(), normalize=False)
                 st.success('{} model gives an accurcay of {}'.format(model_selection, acc_score))
-                if st.button('Save model'):
-                    pickle.dump(regressor, open('Linear_Regression.pkl', 'wb'))
+                Linear_Regression = pickle.dumps(regressor)
+                b64 = base64.b64encode(Linear_Regression).decode()
+                st.markdown('### **⬇️ Download model as Pkl File **')
+                href2 = f'<a href="data:file/txt;base64,{b64}">Download Pickle File</a> (right-click and save as ".pkl")'
+                st.markdown(href2, unsafe_allow_html=True)
+
 
 
         elif model_selection == 'KNN':
@@ -166,8 +182,11 @@ elif choice == 'ML Models':
                 y_pred = neigh.predict(x_test)
                 acc_score = accuracy_score(y_test, y_pred, normalize=False)
                 st.success('{} model gives an accurcay of {}'.format(model_selection, acc_score))
-                if st.button('Save model'):
-                    pickle.dump(neigh, open('KNN.pkl', 'wb'))
+                k_nearest = pickle.dumps(neigh)
+                b64 = base64.b64encode(k_nearest).decode()
+                st.markdown('### **⬇️ Download model as Pkl File **')
+                href2 = f'<a href="data:file/txt;base64,{b64}">Download Pickle File</a> (right-click and save as ".pkl")'
+                st.markdown(href2, unsafe_allow_html=True)
 
         elif model_selection == 'SVM':
             all_column_names1 = data1.columns.to_list()
@@ -185,8 +204,11 @@ elif choice == 'ML Models':
                 y_pred = vector.predict(x_test)
                 acc_score = accuracy_score(y_test, y_pred, normalize=False)
                 st.success('{} model gives an accurcay of {}'.format(model_selection, acc_score))
-                if st.button('Save model'):
-                    pickle.dump(vector, open('SVM.pkl', 'wb'))
+                sv_machine = pickle.dumps(vector)
+                b64 = base64.b64encode(sv_machine).decode()
+                st.markdown('### **⬇️ Download model as Pkl File **')
+                href2 = f'<a href="data:file/txt;base64,{b64}">Download Pickle File</a> (right-click and save as ".pkl")'
+                st.markdown(href2, unsafe_allow_html=True)
         
         elif model_selection == 'Random Forest':
             all_column_names1 = data1.columns.to_list()
@@ -203,8 +225,11 @@ elif choice == 'ML Models':
                 y_pred = clf.predict(x_test)
                 acc_score = accuracy_score(y_test, y_pred, normalize=False)
                 st.success('{} model gives an accurcay of {}'.format(model_selection, acc_score))
-                if st.button('Save model'):
-                    pickle.dump(clf, open('Random_Forest.pkl', 'wb'))
+                forest = pickle.dumps(clf)
+                b64 = base64.b64encode(forest).decode()
+                st.markdown('### **⬇️ Download model as Pkl File **')
+                href2 = f'<a href="data:file/txt;base64,{b64}">Download Pickle File</a> (right-click and save as ".pkl")'
+                st.markdown(href2, unsafe_allow_html=True)
 
 elif choice == 'About':
     st.subheader('About this App')
