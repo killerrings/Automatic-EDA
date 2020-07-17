@@ -19,6 +19,6 @@ streamlit run app.py
 
 • A glimpse of the web app:
 
-<img src="/demo1.gif" width="898" height="394.27"/>
+<img src="/demo1.gif" width="920" height="394.27"/>
 <br>
-<img src="/Web App.png" width="898" height="550"/>
+<img src="/Web App.png" width="920" height="550"/>
