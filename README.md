@@ -21,4 +21,4 @@ streamlit run app.py
 
 <img src="/demo1.gif" width="898" height="394.27"/>
 <br>
-<img src="/Web App.png" width="898" height="510"/>
+<img src="/Web App.png" width="898" height="550"/>
