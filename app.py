@@ -232,6 +232,7 @@ elif choice == 'ML Models':
                 st.markdown(href2, unsafe_allow_html=True)
 
 elif choice == 'About':
+	
     st.subheader('About this App')
     html_temp1 = """
     <p> Automatic EDA Web App is a platform for Data Science and Machine Learning Enthusiasts where in they can perform Exploratory Data Analysis to its most advanced concepts with just a click. People with no prior knowledge of Data Science can see and perform data analytics on their preferred datasets. 
@@ -244,12 +245,8 @@ Code in <a href="https://github.com/killerrings">Github</a>
 </p>
     """ 
     # st.write('Automatic EDA Web App is a platform for Data Science and Machine Learning Enthusiasts where in they can perform Exploratory Data Analysis to its most advanced concepts with just a click. People with no prior knowledge of Data Science can see and perform data analytics on their preferred datasets. This web App consists of extensive tools for data analytics from basics of data science to data visualization. Data Visualisation tools of Streamlit makes it easier for the user to plot beautiful plots and visualize their data in their preferred manner. Automatic EDA Web App contains lot of tools for data analysis from Summary of a dataset to handling missing values in a data frame. Data frames after preferred analysis can be saved into their local machines. This Web App also provides user the flexibility to build models and save them for later use. Models like Linear Regression, Random Forest are provided in order to get the best results for the desired dataset. Explore. Dive in already!')
-    st.markdown(html_temp1,unsafe_allow_html=True)
-    
-    st.write('---')
-		st.write('Author: Swaraj Gogoi')
-		st.write('[Linkedin](https://www.linkedin.com/in/swaraj-aman-gogoi-aaa11b198/) | [Github](https://github.com/killerrings) | [Portfolio](https://killerrings.github.io/SwarajGogoi/)')
-		st.write('')
+    st.markdown(html_temp1,unsafe_allow_html=True)    
+	
 
           
 
