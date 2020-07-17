@@ -7,7 +7,7 @@ Deployed at: https://automatic-eda.herokuapp.com/
 • Installing<br>
 Clone this repository to your local computer
 ```
-git clone https://github.com/killerrings/Brain-Tumor-Classification.git
+git clone https://github.com/killerrings/Automatic-EDA-.git
 ```
 then run
 ```
@@ -20,3 +20,4 @@ streamlit run app.py
 • A glimpse of the web app:
 
 <img src="/demo1.gif" width="898" height="394.27"/>
+<img src="/Web App.png" width="898" height="394.27"/>
