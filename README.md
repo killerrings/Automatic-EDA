@@ -7,7 +7,7 @@ Deployed at: https://automatic-eda.herokuapp.com/
 • Installing<br>
 Clone this repository to your local computer
 ```
-git clone https://github.com/killerrings/Automatic-EDA-.git
+git clone https://github.com/killerrings/Automatic-EDA.git
 ```
 then run
 ```
