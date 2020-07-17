@@ -2,7 +2,7 @@
 • This repository consists of files required to deploy a **Machine Learning** Web App created with **Streamlit** on Heroku platform.
 
 • If you want to check the deployed model, click on the following link:<br>
-Deployed at: https://brain-cancer-classifier.herokuapp.com/
+Deployed at: https://automatic-eda.herokuapp.com/
 
 • Installing<br>
 Clone this repository to your local computer
