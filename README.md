@@ -10,7 +10,7 @@ Clone this repository to your local computer
 git clone https://github.com/killerrings/Automatic-EDA.git
 ```
 then run
-<img src="/shell.png" width="800" height="394.27"/>
+<img src="/shell.png" width="650" height="294.27"/>
 ```
 pip install -r requirements.txt
 streamlit run app.py
