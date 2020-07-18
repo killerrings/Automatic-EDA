@@ -9,12 +9,8 @@ Clone this repository to your local computer
 ```
 git clone https://github.com/killerrings/Automatic-EDA.git
 ```
-then run
+then run<br>
 <img src="/shell.png" width="650" height="300"/>
-```
-pip install -r requirements.txt
-streamlit run app.py
-```
 
 • Please do ⭐ the repository, if it helped you
 
