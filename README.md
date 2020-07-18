@@ -9,7 +9,7 @@ Clone this repository to your local computer
 ```
 git clone https://github.com/killerrings/Automatic-EDA.git
 ```
-then run<br>
+then run<br><br>
 <img src="/shell.png" width="650" height="300"/>
 
 • Please do ⭐ the repository, if it helped you
